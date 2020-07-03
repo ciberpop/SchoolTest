@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
+    "comma-dangle": ["error", "never"],
+    "no-use-before-define": ["off", { "functions": true, "classes": true }]
+  }
+}
