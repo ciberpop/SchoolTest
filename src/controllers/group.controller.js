@@ -1,12 +1,12 @@
 const { responseStatusCodesEnum: { CREATED, NO_CONTENT } } = require('../constants');
-const { services: { studentService } } = require('../db');
+const { services: { groupService } } = require('../db');
 
 module.exports = {
   create: async (req, res, next) => {
     try {
-      const student = req.body;
+      const group = req.body;
 
-      await studentService.create(student);
+      await groupService.create(group);
 
       res.sendStatus(CREATED);
     } catch (e) {
@@ -16,9 +16,9 @@ module.exports = {
 
   getAll: async (req, res, next) => {
     try {
-      const students = await studentService.getAll();
+      const groups = await groupService.getAll();
 
-      res.json(students);
+      res.json(groups);
     } catch (e) {
       next(e);
     }
@@ -26,7 +26,7 @@ module.exports = {
 
   getOne: async (req, res, next) => {
     try {
-      res.json(req.student);
+      res.json(req.group);
     } catch (e) {
       next(e);
     }
@@ -35,11 +35,11 @@ module.exports = {
   update: async (req, res, next) => {
     try {
       const { id } = req.params;
-      const updatedStudent = req.body;
+      const updatedGroup = req.body;
 
-      await studentService.update(id, updatedStudent);
+      await groupService.update(id, updatedGroup);
 
-      res.json(updatedStudent);
+      res.json(updatedGroup);
     } catch (e) {
       next(e);
     }
@@ -49,7 +49,7 @@ module.exports = {
     try {
       const { id } = req.params;
 
-      await studentService.delete(id);
+      await groupService.delete(id);
 
       res.sendStatus(NO_CONTENT);
     } catch (e) {

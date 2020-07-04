@@ -13,7 +13,7 @@ const groupSchema = new Schema({
       studentId: {
         type: Schema.Types.ObjectId,
         ref: STUDENT,
-        required: true,
+        required: true
       }
     }
   ]

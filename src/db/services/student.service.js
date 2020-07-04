@@ -7,19 +7,11 @@ module.exports = {
     return studentToCreate.save();
   },
 
-  getAll: () => {
-    return StudentModel.find();
-  },
+  getAll: () => StudentModel.find(),
 
-  getOne: (id) => {
-    return StudentModel.findById(id);
-  },
+  getOne: (id) => StudentModel.findById(id),
 
-  update: (teacher, update) => {
-    return StudentModel.findByIdAndUpdate(teacher, update);
-  },
+  update: (student, update) => StudentModel.findByIdAndUpdate(student, update),
 
-  delete: (params) => {
-    return StudentModel.findByIdAndDelete(params);
-  }
+  delete: (params) => StudentModel.findByIdAndDelete(params)
 };
