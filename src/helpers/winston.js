@@ -3,7 +3,7 @@ const winston = require('winston');
 
 const options = {
   errorFile: {
-    filename: path.join(process.cwd(), 'logs', 'error.log'),
+    filename: path.join(__dirname, '..', 'logs', 'error.log'),
     handleExceptions: true,
     json: true
   }
