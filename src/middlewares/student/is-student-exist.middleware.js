@@ -8,6 +8,7 @@ const { ErrorHandler } = require('../../errors');
 const { services: { studentService } } = require('../../db');
 const { idValidationSchema } = require('../../validators');
 
+// eslint-disable-next-line consistent-return
 module.exports = async (req, res, next) => {
   try {
     const { id } = req.params;

@@ -18,15 +18,15 @@ connectToDB();
 app.use(router);
 
 app.use('*', (err, req, res, next) => {
-    logger.error({
-        method: req.method,
-        url: req.path,
-        data: req.body,
-        time: new Date(),
-        message: err.message
-    })
+  logger.error({
+    method: req.method,
+    url: req.path,
+    data: req.body,
+    time: new Date(),
+    message: err.message
+  });
 
-    next(err);
+  next(err);
 });
 
 app.use('*', (err, req, res, next) => {

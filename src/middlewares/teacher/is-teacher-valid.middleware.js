@@ -7,6 +7,7 @@ const {
 const { ErrorHandler } = require('../../errors');
 const { teacherValidationSchema } = require('../../validators');
 
+// eslint-disable-next-line consistent-return
 module.exports = async (req, res, next) => {
   try {
     const teacher = req.body;

@@ -9,7 +9,7 @@ module.exports = {
       await teacherService.create(teacher);
 
       res.sendStatus(CREATED);
-    } catch(e) {
+    } catch (e) {
       next(e);
     }
   },
@@ -19,7 +19,7 @@ module.exports = {
       const teachers = await teacherService.getAll();
 
       res.json(teachers);
-    } catch(e) {
+    } catch (e) {
       next(e);
     }
   },
@@ -27,7 +27,7 @@ module.exports = {
   getOne: async (req, res, next) => {
     try {
       res.json(req.teacher);
-    } catch(e) {
+    } catch (e) {
       next(e);
     }
   },
@@ -40,7 +40,7 @@ module.exports = {
       await teacherService.update(id, updatedTeacher);
 
       res.json(updatedTeacher);
-    } catch(e) {
+    } catch (e) {
       next(e);
     }
   },
@@ -52,7 +52,7 @@ module.exports = {
       await teacherService.delete(id);
 
       res.sendStatus(NO_CONTENT);
-    } catch(e) {
+    } catch (e) {
       next(e);
     }
   }

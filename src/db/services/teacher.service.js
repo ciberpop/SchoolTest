@@ -7,19 +7,11 @@ module.exports = {
     return teacherToCreate.save();
   },
 
-  getAll: () => {
-    return TeacherModel.find();
-  },
+  getAll: () => TeacherModel.find(),
 
-  getOne: (id) => {
-    return TeacherModel.findById(id);
-  },
+  getOne: (id) => TeacherModel.findById(id),
 
-  update: (teacher, update) => {
-    return TeacherModel.findByIdAndUpdate(teacher, update);
-  },
+  update: (teacher, update) => TeacherModel.findByIdAndUpdate(teacher, update),
 
-  delete: (params) => {
-    return TeacherModel.findByIdAndDelete(params);
-  }
+  delete: (params) => TeacherModel.findByIdAndDelete(params)
 };
