@@ -4,7 +4,7 @@ It's a simple REST API application for internship in Chatbots.Studio.
 
 ## Quick start
 
-- npm init
+- npm install
 - npm run start
 
 ### Data modeling diagram
